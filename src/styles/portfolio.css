@@ -1,0 +1,153 @@
+/* portfolio.css — global styles for the portfolio */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Reset ─────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Design tokens ──────────────────────────────────────────────────────────── */
+:root {
+  --ff-head: 'DM Serif Display', serif;
+  --ff-mono: 'DM Mono', monospace;
+  --ff-body: 'DM Sans', sans-serif;
+
+  --c-bg: #ffffff;
+  --c-bg2: #f4f4f2;
+  --c-border: rgba(0, 0, 0, 0.09);
+  --c-text: #111110;
+  --c-muted: #5f5f5b;
+  --c-accent: #185FA5;
+
+  --max-w: 1300px;
+  --pad-x: 6rem;
+  --section-gap: 5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: #0e0e0d;
+    --c-bg2: #1a1a18;
+    --c-border: rgba(255, 255, 255, 0.08);
+    --c-text: #f0f0ec;
+    --c-muted: #8a8a84;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 1.5rem;
+  }
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--ff-body);
+  color: var(--c-text);
+  background: var(--c-bg);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout wrapper ─────────────────────────────────────────────────────────── */
+.port {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad-x) 8rem;
+}
+
+/* ── Shared section styles ──────────────────────────────────────────────────── */
+section {
+  padding: var(--section-gap) 0;
+  border-top: 0.5px solid var(--c-border);
+}
+
+.sec-label {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--c-muted);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sec-label span {
+  background: var(--c-bg2);
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+
+h2 {
+  font-family: var(--ff-head);
+  font-size: clamp(32px, 3.5vw, 44px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  padding: 13px 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s;
+  letter-spacing: .01em;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.btn-primary {
+  background: var(--c-text);
+  color: var(--c-bg);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: .78;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--c-text);
+  border: 0.5px solid var(--c-border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--c-text);
+}
+
+/* ── Shared tag pill ────────────────────────────────────────────────────────── */
+.tag {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  background: var(--c-bg2);
+  border-radius: 3px;
+  color: var(--c-muted);
+  letter-spacing: .02em;
+}
+
+/* ── Fade-in animation ──────────────────────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

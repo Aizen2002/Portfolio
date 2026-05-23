@@ -1,0 +1,133 @@
+/* Hero.css */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 6rem 0 5rem;
+  min-height: 88vh;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-tag {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  color: var(--c-accent);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--c-accent);
+}
+
+h1 {
+  font-family: var(--ff-head);
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 400;
+  line-height: 1.02;
+  margin-bottom: 1.75rem;
+  letter-spacing: -.02em;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--c-muted);
+}
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--c-muted);
+  line-height: 1.85;
+  max-width: 480px;
+  margin-bottom: 2.75rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ── Hero image panel ───────────────────────────────────────────── */
+.hero-image-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #e8e8e4;
+  max-height: 580px;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.hero-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, transparent 50%);
+  border-radius: 20px;
+}
+
+/* floating badge */
+.hero-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: .65rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25);
+  flex-shrink: 0;
+}
+
+.hero-badge-text {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: .04em;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 4rem 0;
+    gap: 3rem;
+  }
+
+  .hero-image-wrap {
+    aspect-ratio: 16 / 7;
+  }
+}
