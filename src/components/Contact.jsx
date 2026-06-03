@@ -23,7 +23,7 @@ export default function Contact() {
         <div className="contact-cta">
           <h2>{cta}</h2>
           <p>{ctaDesc}</p>
-          <a className="btn btn-primary" href={`mailto:${email}`}>
+          <a className="btn btn-primary"href={`https://mail.google.com/mail/?view=cm&to=${email}`}target="_blank"rel="noreferrer">
             Send a message
           </a>
         </div>

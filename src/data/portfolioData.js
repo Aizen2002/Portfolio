@@ -37,8 +37,7 @@ export const portfolioData = {
     {
       name: "PSA Digital Library",
       desc: "Developed a PSA Digital Library web application that provides organized access to digital documents and records through a user-friendly interface.",
-      tags: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
-      liveUrl: "https://taskflow.vercel.app",   // optional
+      tags: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],  // optional
       image: "/screenshots/PSA-digital-library.png",        // optional
     },
     {
@@ -55,15 +54,15 @@ export const portfolioData = {
   skills: [
     {
       group: "Frontend",
-      items: ["React", "TypeScript","HTML", "CSS", "JavaScript"],
+      items: ["React", "JavaScript", "TypeScript", "HTML", "CSS"],
     },
     {
       group: "Backend",
-      items: ["Node.js", "Express JS", "PHP", "Redis"],
+      items: ["Node.js", "Express JS", "PHP"],
     },
     {
       group: "Dev tools & AI tools",
-      items: ["Git", "Chatgpt", "Claude AI", "Postman"],
+      items: ["Git", "ChatGPT", "Claude AI", "Postman API"],
     },
   ],
 
