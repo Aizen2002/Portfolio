@@ -13,7 +13,9 @@ export default function Nav() {
       <ul className="nav-links">
         {navSections.map((section) => (
           <li key={section.id}>
-            <a onClick={() => scrollTo(section.id)}>{section.label}</a>
+            <button onClick={() => scrollTo(section.id)}>
+              {section.label}
+            </button>
           </li>
         ))}
       </ul>

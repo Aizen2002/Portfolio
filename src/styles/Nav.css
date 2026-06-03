@@ -26,16 +26,19 @@
   list-style: none;
 }
 
-.nav-links a {
+.nav-links button {
+  background: none;
+  border: none;
+  font-family: var(--ff-body);
   font-size: 14px;
   color: var(--c-muted);
-  text-decoration: none;
   letter-spacing: .01em;
   transition: color .2s;
   cursor: pointer;
+  padding: 0;
 }
 
-.nav-links a:hover {
+.nav-links button:hover {
   color: var(--c-text);
 }
 
