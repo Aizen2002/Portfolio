@@ -83,7 +83,7 @@ export const portfolioData = {
     issuer: "LinkedIn Learning",
     date: "July 2026",
     image: "/screenshots/MicrosoftAzureCertificate.jpg",       // put image in public/certificates/
-    credentialUrl: "https://coursera.org/verify/xxxx", // optional
+    credentialUrl: "https://www.linkedin.com/learning/paths/microsoft-azure-essentials-professional-certificate-by-microsoft-and-linkedin", // optional
   },
   {
     name: "AI For Business Professionals",
