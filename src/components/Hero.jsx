@@ -28,9 +28,6 @@ export default function Hero() {
           <button className="btn btn-primary" onClick={() => scrollTo("projects")}>
             View projects
           </button>
-          <button className="btn btn-ghost" onClick={() => scrollTo("contact")}>
-            Get in touch
-          </button>
           <a className="btn btn-ghost" href={resumeFile} target="_blank" rel="noreferrer">
             View CV ↗
           </a>

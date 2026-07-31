@@ -1,0 +1,128 @@
+/* Certifications.css */
+
+/* ── Grid ───────────────────────────────────────────────────────────────────── */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 860px) {
+    .cert-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Card ───────────────────────────────────────────────────────────────────── */
+.cert-card {
+    background: var(--c-bg2);
+    border: 0.5px solid var(--c-border);
+    border-radius: 14px;
+    padding: 1.75rem;
+    cursor: pointer;
+    transition: border-color .2s, transform .2s;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.cert-card:hover {
+    border-color: var(--c-accent);
+    transform: translateY(-3px);
+}
+
+.cert-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: .5rem;
+}
+
+.cert-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.cert-view-hint {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    color: var(--c-muted);
+    transition: color .2s;
+}
+
+.cert-card:hover .cert-view-hint {
+    color: var(--c-accent);
+}
+
+.cert-name {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--c-text);
+}
+
+.cert-issuer {
+    font-size: 13px;
+    color: var(--c-accent);
+    letter-spacing: .01em;
+}
+
+.cert-date {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    color: var(--c-muted);
+    margin-top: .25rem;
+}
+
+/* ── Modal overrides ─────────────────────────────────────────────────────────── */
+.cert-modal {
+    max-width: 680px;
+}
+
+.cert-modal-date {
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    color: var(--c-muted);
+    margin-top: .4rem;
+}
+
+/* Certificate image */
+.cert-modal-image-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: var(--c-bg2);
+    border-top: 0.5px solid var(--c-border);
+    border-bottom: 0.5px solid var(--c-border);
+}
+
+.cert-modal-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* No image placeholder */
+.cert-modal-no-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    padding: 3rem 2rem;
+    background: var(--c-bg2);
+    border-top: 0.5px solid var(--c-border);
+    border-bottom: 0.5px solid var(--c-border);
+    color: var(--c-muted);
+    font-size: 14px;
+}
+
+.cert-modal-no-image span {
+    font-size: 40px;
+}

@@ -76,6 +76,31 @@ export const portfolioData = {
     }
   ],
 
+  // ── Experience ────────────────────────────────────────────────────────────
+  certifications: [
+  {
+    name: "Microsoft Azure Essentials by Microsoft Press",
+    issuer: "LinkedIn Learning",
+    date: "July 2026",
+    image: "/screenshots/MicrosoftAzureCertificate.jpg",       // put image in public/certificates/
+    credentialUrl: "https://coursera.org/verify/xxxx", // optional
+  },
+  {
+    name: "AI For Business Professionals",
+    issuer: "HP Life | HP Foundation",
+    date: "July 2026",
+    image: "/screenshots/AIForBusinessProfessionalCertificate.jpg",
+    credentialUrl: "https://www.life-global.org/course/423-ai-for-business-professionals  ",
+  },
+    {
+    name: "Agile Project Management",
+    issuer: "HP Life | HP Foundation",
+    date: "July 2026",
+    image: "/screenshots/AgileProjectManagementCertificate.jpg",
+    credentialUrl: "https://www.life-global.org/course/380-agile-project-management",
+  },
+],
+
   // ── Contact ───────────────────────────────────────────────────────────────
   contact: {
     cta: "Let's build something together.",
@@ -92,6 +117,7 @@ export const portfolioData = {
     { id: "about",      label: "About"      },
     { id: "projects",   label: "Projects"   },
     { id: "skills",     label: "Skills"     },
+    { id: "certifications", label: "Certifications" },
     { id: "experience", label: "Experience" },
     { id: "contact",    label: "Contact"    },
   ],
